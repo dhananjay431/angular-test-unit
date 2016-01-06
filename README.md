@@ -6,6 +6,8 @@ Configuration
 
 Navigate to your working directory in your terminal or command prompt and follow the below instructions.
 
+http://www.bradoncode.com/tutorials/angularjs-unit-testing/
+
 Install AngularJS
 npm install angular --save
 Install Karma

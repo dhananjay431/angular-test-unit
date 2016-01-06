@@ -1,44 +1,32 @@
-describe('calculator', function () {
+describe('mediPlus', function () {
 
-    beforeEach(angular.mock.module('calculatorApp'));
+    beforeEach(angular.mock.module('mediplus'));
 
     var $controller;
 
     beforeEach(angular.mock.inject(function(_$controller_){
       $controller = _$controller_;
-    }));
 
-    describe('mul', function () {
-        it('5*6=30', function () {
-            var $scope = {};
-            var controller = $controller('CalculatorController', { $scope: $scope });
-            
-            expect($scope.mul(5,8)).toBe(30);
+      
+          
+    }));
+//add function 
+  describe('validKey', function () {
+
+        it('1 + 1 should equal 2', function () {
+          var $scope = {};
+          var controller = $controller('home', { $scope: $scope });
+          var data={"is_valid":true,"success":true,"data":{"extendOn":"12","registrationKey":"dhananjay","duration":12,"plan":"12","registrationDate":"0000-00-00 00:00:00","marketingMember":"sonu"}};
+          expect($scope.validKey()).toBe(data);
         }); 
     });
-
-	describe('add', function () {
-        it('5+6=11', function () {
-            var $scope = {};
-            var controller = $controller('CalculatorController', { $scope: $scope });
+    //add function 
+/*    describe('validKey', function () {
+        it('1 + 1 should equal 2', function () {
             
-            expect($scope.add(6,6)).toBe(13);
+
+            expect($scope.validKey()).toBe(10);
         }); 
-    });
+    });*/
 
 });
-/*
-describe('Filters', function() {
-  beforeEach(module('myApp'));
-
-  describe('reverse', function() {
-	  var reverse;
-    beforeEach(inject(function($filter) {
-      reverse=$filter('reverse',{});
-    }));
-    it('should replace VERSION', function() {
-      expect(reverse('dhananjay')).toBe('dhananjay');
-    });
-  });
-});
-*/
